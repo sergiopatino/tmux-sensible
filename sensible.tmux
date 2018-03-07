@@ -143,19 +143,19 @@ main() {
 		tmux bind-key "$prefix_without_ctrl" last-window
 	fi
 
- # easier switching between next/prev window
-#	if key_binding_not_set "C-p"; then
-#		tmux bind-key C-p previous-window
-#	fi
-#	if key_binding_not_set "C-n"; then
-#		tmux bind-key C-n next-window
-#	fi
- tmux unbind-key p
- tmux unbind-key n
- tmux bind-key [ previous-window
- tmux bind-key C-[ previous-window
- tmux bind-key ] next-window
- tmux bind-key C-] next-window
+	# easier switching between next/prev window
+	#	if key_binding_not_set "C-p"; then
+	#		tmux bind-key C-p previous-window
+	#	fi
+	#	if key_binding_not_set "C-n"; then
+	#		tmux bind-key C-n next-window
+	#	fi
+	tmux unbind-key p
+	tmux unbind-key n
+	tmux bind-key h previous-window
+	tmux bind-key C-h previous-window
+	tmux bind-key l next-window
+	tmux bind-key C-l next-window
 
 	# source `.tmux.conf` file - as suggested in `man tmux`
 	if key_binding_not_set "R"; then
