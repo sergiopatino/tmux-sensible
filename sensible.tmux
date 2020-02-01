@@ -152,10 +152,10 @@ main() {
 	#	fi
 	tmux unbind-key p
 	tmux unbind-key n
-	tmux bind-key h previous-window
-	tmux bind-key C-h previous-window
-	tmux bind-key l next-window
-	tmux bind-key C-l next-window
+	tmux bind-key -r h previous-window
+	tmux bind-key -r C-h previous-window
+	tmux bind-key -r l next-window
+	tmux bind-key -r C-l next-window
 
 	# source `.tmux.conf` file - as suggested in `man tmux`
 	if key_binding_not_set "R"; then
